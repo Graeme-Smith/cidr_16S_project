@@ -1,0 +1,31 @@
+{
+  "name": "hello-world",
+  "dxapi": "1.0.0",
+  "version": "0.0.1",
+  "inputSpec": [
+    {
+      "name": "infile",
+      "class": "file",
+      "optional": true
+    }
+  ],
+  "outputSpec": [
+    {
+      "name": "outfile",
+      "class": "file"
+    }
+  ],
+  "runSpec": {
+    "interpreter": "bash",
+    "file": "src/code.sh",
+    "execDepends": [
+    ],
+    "systemRequirements": {
+      "main": {
+        "instanceType": "mem2_hdd2_x2"
+      }
+    }
+  },
+  "authorizedUsers": []
+}
+
