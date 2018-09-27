@@ -9,6 +9,7 @@ import json
 import time
 
 here = os.path.dirname(sys.argv[0])
+
 git_revision = subprocess.check_output(["git", "describe", "--always", "--dirty", "--tags"], cwd=here).strip()
 
 def main():

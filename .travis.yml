@@ -1,15 +1,13 @@
 language: python
 python:
-  - 2.7
-# prevent travis from doing pip install requirements.txt
+- 2.7
 install: true
 script:
-# disable Travis default virtualenv
 - deactivate
-# deploy dx-toolkit
 - wget https://wiki.dnanexus.com/images/files/dx-toolkit-current-ubuntu-12.04-amd64.tar.gz
 - tar zxf dx-toolkit-current-ubuntu-12.04-amd64.tar.gz
 - source dx-toolkit/environment
-# execute workflow builder script
 - python build_workflow.py --run-tests
-
+env:
+  global:
+    secure: ziOeXqf1k7wAj8awXpVlrlLY1V9OwCz7K9S+AbIRA9eQjP4eSiMacbdo1cRfOpRVf1fzmFjypoRxwJkyh6Pr0HcYF4RP9vu9l8R06rtsXS+Sy1nUni2JIVyNrklalQ9sajI/YKI7kNWtt/JQ+Asm62jJ7HuwAcjMgF1SmN0h8zBpzK+PpA+BhbI9OJrAwuOew8ovNwEEvq/XYH9NzmMHsDIDchyWMto3Q/RXoXyAEGRJ/KtlofPJ7WcwnjHG0o6KOA7ggeBuAIBe1OI24y79JlpNNTFkcU0rZBRO+hdPVA07FdbZQelhWZHp1M9L/SpkfobRIDy8p+RBxLgKV3aKwsZkMHqSgM0+oIAhn+wuueqqHItSFB8P4FENt6uBOtiJFALI4Dz1D8JEwF1if723B/ymJcGvjm76d15L2yZ+x5eGQj74LwCldEs9ogyOVjNjjrF5zQuF7dwq3Rb27Ow0eK/UgcgF4TpVG36i9FQTO//bhHirKZmvx6JYs+zLkaPusKQjNN/4K/5FleY4oY9LBvgfdAVuT0WaUgS4YvzGAynTVb5BtKqqh/cqWeA6YBdN1xWxjxo35qFgkE9Jhvzil9KehpgWAyKBxi7uJ0lGqaDhLFqqemYbHSxUjPA3XQuUPMdXyrN3IkGxFZBmiYpIb1Dr7XL+eF90ckb+wJPm4ao=
