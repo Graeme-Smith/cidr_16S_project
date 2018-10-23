@@ -1,13 +1,8 @@
 language: python
 python:
-- 2.7
-install: true
-script:
-- deactivate
-- wget https://wiki.dnanexus.com/images/files/dx-toolkit-current-ubuntu-12.04-amd64.tar.gz
-- tar zxf dx-toolkit-current-ubuntu-12.04-amd64.tar.gz
-- source dx-toolkit/environment
-- python build_workflow.py --run-tests
+- '2.7'
+- '3.3'
+- pypy
 env:
   global:
-    secure: ziOeXqf1k7wAj8awXpVlrlLY1V9OwCz7K9S+AbIRA9eQjP4eSiMacbdo1cRfOpRVf1fzmFjypoRxwJkyh6Pr0HcYF4RP9vu9l8R06rtsXS+Sy1nUni2JIVyNrklalQ9sajI/YKI7kNWtt/JQ+Asm62jJ7HuwAcjMgF1SmN0h8zBpzK+PpA+BhbI9OJrAwuOew8ovNwEEvq/XYH9NzmMHsDIDchyWMto3Q/RXoXyAEGRJ/KtlofPJ7WcwnjHG0o6KOA7ggeBuAIBe1OI24y79JlpNNTFkcU0rZBRO+hdPVA07FdbZQelhWZHp1M9L/SpkfobRIDy8p+RBxLgKV3aKwsZkMHqSgM0+oIAhn+wuueqqHItSFB8P4FENt6uBOtiJFALI4Dz1D8JEwF1if723B/ymJcGvjm76d15L2yZ+x5eGQj74LwCldEs9ogyOVjNjjrF5zQuF7dwq3Rb27Ow0eK/UgcgF4TpVG36i9FQTO//bhHirKZmvx6JYs+zLkaPusKQjNN/4K/5FleY4oY9LBvgfdAVuT0WaUgS4YvzGAynTVb5BtKqqh/cqWeA6YBdN1xWxjxo35qFgkE9Jhvzil9KehpgWAyKBxi7uJ0lGqaDhLFqqemYbHSxUjPA3XQuUPMdXyrN3IkGxFZBmiYpIb1Dr7XL+eF90ckb+wJPm4ao=
+    secure: nYvMu3fOb2zl+k/lowQpYNIjKhY6CY95Xl22r5dNrr7+Gn7xgQlcyHskZOpzvX3fv4/EsGZ0opTU3O52QS6CV7jrk+VkROuxVOyRwPt2plEWKUv3hxDga2w5BRVRl8jY1cGggDEfBoki6nw11uakAbpIDuz43JtwIwBWpyV6w5M4x9HEQA4btULrCMQpSV2+8tz/TrNFWZ6filPSgOd65kKbVzCu4qS6H0V/whTOvuqXNbKre6VqhHjbG3j4rqtDJ0z6CL0IfuPKwJScd1+kFoG6EdH+FgumfVTUtd+vmuPFPOFPtLU6zmIe39MXkApxN93Ik4MN9fHL6AGucF+M2kU6QMTDQ1Ht9a8Sb89Yzs658qBLXtBek0wB8X61cEHmCNtpXoGb8Jjt3lxH7YJDT1T2VOPWrG5/NA4IiCGfY4+NSUAlDwLsKBNp+3Lophv0z/+PtzcWjwdCQpw6G91v5unh7Pi4Vn8dQATB8lR40Pmjhpmz/ev3RFxWrIEvqLjilnQkZuncYEU1aB1wRYxVA5av8wxyFmyP1ie+v9UrpnIwp39rk7a4CORCqEjjExF7C7k08AJaZ4NFcL8GdFQUp+AYRsa2qLYYOUEijY6gbdfEEqVf+pj5fTQvi0lHspeREcPmEWY42gKdLZV34HPLPGmsJdF2inI29C5dYKKx53I=
