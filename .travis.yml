@@ -1,8 +1,13 @@
 language: python
 python:
-- '2.7'
-- '3.3'
-- pypy
+ 2.7
+install: true
+script:
+ deactivate
+ wget https://wiki.dnanexus.com/images/files/dx-toolkit-current-ubuntu-12.04-amd64.tar.gz
+ tar zxf dx-toolkit-current-ubuntu-12.04-amd64.tar.gz
+ source dx-toolkit/environment
+ python build_workflow.py --run-tests
 env:
   global:
     secure: nYvMu3fOb2zl+k/lowQpYNIjKhY6CY95Xl22r5dNrr7+Gn7xgQlcyHskZOpzvX3fv4/EsGZ0opTU3O52QS6CV7jrk+VkROuxVOyRwPt2plEWKUv3hxDga2w5BRVRl8jY1cGggDEfBoki6nw11uakAbpIDuz43JtwIwBWpyV6w5M4x9HEQA4btULrCMQpSV2+8tz/TrNFWZ6filPSgOd65kKbVzCu4qS6H0V/whTOvuqXNbKre6VqhHjbG3j4rqtDJ0z6CL0IfuPKwJScd1+kFoG6EdH+FgumfVTUtd+vmuPFPOFPtLU6zmIe39MXkApxN93Ik4MN9fHL6AGucF+M2kU6QMTDQ1Ht9a8Sb89Yzs658qBLXtBek0wB8X61cEHmCNtpXoGb8Jjt3lxH7YJDT1T2VOPWrG5/NA4IiCGfY4+NSUAlDwLsKBNp+3Lophv0z/+PtzcWjwdCQpw6G91v5unh7Pi4Vn8dQATB8lR40Pmjhpmz/ev3RFxWrIEvqLjilnQkZuncYEU1aB1wRYxVA5av8wxyFmyP1ie+v9UrpnIwp39rk7a4CORCqEjjExF7C7k08AJaZ4NFcL8GdFQUp+AYRsa2qLYYOUEijY6gbdfEEqVf+pj5fTQvi0lHspeREcPmEWY42gKdLZV34HPLPGmsJdF2inI29C5dYKKx53I=
