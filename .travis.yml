@@ -4,13 +4,10 @@ python:
 install: true
 script:
 - deactivate
-- wget https://wiki.dnanexus.com/images/files/dx-toolkit-current-ubuntu-14.04-amd64.tar.gz
-- tar zxf dx-toolkit-current-ubuntu-14.04-amd64.tar.gz
+- wget https://wiki.dnanexus.com/images/files/dx-toolkit-current-ubuntu-16.04-amd64.tar.gz
+- tar zxf dx-toolkit-current-ubuntu-16.04-amd64.tar.gz
 - source dx-toolkit/environment
 - python --version
-- sudo add-apt-repository ppa:fkrull/deadsnakes-python2.7
-- sudo apt-get update
-- sudo apt-get upgrade
 - python build_workflow.py --run-tests
 env:
   global:
